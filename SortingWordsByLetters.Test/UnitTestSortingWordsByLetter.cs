@@ -5,14 +5,14 @@ namespace SortingWordsByLetters.Test
 {
     public class Tests
     {
-        public static readonly object[] CorrectlySortedNoDuplicateLettersAndNoPunctuation =
+        public static readonly object[] CorrectlySortedByEarliestLetterWithoutDuplicateLettersOrPunctuation =
         {
             new object[] { "Crwth, vox, zaps, qi, gym, fjeld, bunk", "zaps, bunk, Crwth, fjeld, gym, qi, vox" },
             new object[] { "Jock, nymphs, waqf, drug, vex, blitz", "waqf, blitz, Jock, drug, vex, nymphs" },
             new object[] { "abc, ced, dfg", "abc, ced, dfg" },
             new object[] { "abd, abc", "abc, abd" },
         };
-        public static readonly object[] CorrectlySortedDuplicateLettersAndNoPunctuation =
+        public static readonly object[] CorrectlySortedByEarlestLetterWithDuplicateLettersNoPuctuation =
         {
             new object[] { "The, quick, brown, fox, jumps, over, a, lazy, dog", "a, lazy, brown, quick, dog, The, over, fox, jumps" },
             new object[] { "Jived, fox, nymph, grabs, quick, waltz", "grabs, waltz, quick, Jived, fox, nymph" },
@@ -47,8 +47,8 @@ namespace SortingWordsByLetters.Test
         /// Basic Happy Day Senario, given a Sentance Where no Letter Is Duplicated, The words are ordered by the lowest letter
         /// </summary>
         [Test]
-        [TestCaseSource(nameof(CorrectlySortedNoDuplicateLettersAndNoPunctuation))]
-        public void TestWordsAreCorrectalySortedByEarlestLetterWithoutNoDuplicateLettersNoPuctuation(string s, string expResult)
+        [TestCaseSource(nameof(CorrectlySortedByEarliestLetterWithoutDuplicateLettersOrPunctuation))]
+        public void WordsAreCorrectlySortedByEarliestLetterWithoutDuplicateLettersOrPunctuation(string s, string expResult)
         {
             List<string> inputData = s.Split(',').ToList();
 
@@ -66,8 +66,8 @@ namespace SortingWordsByLetters.Test
         }
 
         [Test]
-        [TestCaseSource(nameof(CorrectlySortedDuplicateLettersAndNoPunctuation))]
-        public void TestWordsAreCorrectalySortedByEarlestLetterWithDuplicateLettersNoPuctuation(string s, string expResult)
+        [TestCaseSource(nameof(CorrectlySortedByEarlestLetterWithDuplicateLettersNoPuctuation))]
+        public void WordsAreCorrectalySortedByEarlestLetterWithDuplicateLettersNoPuctuation(string s, string expResult)
         {
             List<string> inputData = s.Split(',').ToList();
 
@@ -87,7 +87,7 @@ namespace SortingWordsByLetters.Test
 
         [Test]
         [TestCaseSource(nameof(CorrectlySortedDuplicateLettersAndPunctuation))]
-        public void TestWordsAreCorrectalySortedByEarlestLetterDuplicateLettersWithPunctuation(string s, string expResult)
+        public void WordsAreCorrectlySortedByEarliestLetterusingDuplicateLettersAndPunctuation(string s, string expResult)
         {
             List<string> inputData = s.Split(',').ToList();
 
