@@ -6,15 +6,15 @@ Task:
 Create code which, given a list of strings, sorts the list based on the earliest alphabetic</br>
 character in each word. For example, “dog, fox, snake” would be ordered “snake, dog, fox”</br>
 because snake contains the letter A, dog the letter D and fox the letter F.</br>
-● Where more than one word contains the same earliest letter, the next earliest letter </br>
+* Where more than one word contains the same earliest letter, the next earliest letter </br>
   should be considered in the same way that a dictionary considers the second letter of</br>
   a word. For example “dog, snake, dolphin” would be ordered “snake, dolphin, dog”</br>
   since “I” is earlier in the alphabet than “O”.</br>
-  ○ This should continue to the 3rd, 4th…Nth letter as required</br>
-● The code should sort based on the European ordering rules (EOR / EN 13710)</br>
-  ○ Note that the built-in string comparison methods in C# adhere to these rules</br>
+  * This should continue to the 3rd, 4th…Nth letter as required</br>
+* The code should sort based on the European ordering rules (EOR / EN 13710)</br>
+  * Note that the built-in string comparison methods in C# adhere to these rules</br>
     fully and can therefore be used safely in your code</br>
-● The design and testing should account for the code being used to sort large</br>
+* The design and testing should account for the code being used to sort large</br>
   collections. As such, consideration should be given to complexity and performance.</br>
 </br>
 About the Application:</br>
