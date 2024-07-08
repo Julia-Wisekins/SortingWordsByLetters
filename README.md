@@ -3,11 +3,11 @@
 Small Project to showcase my development knowledge.
 
 Contains:
-*Interfaces
-*Method overriding
-*Language-Integrated Query (LINQ) 
-*Regex
-*Uinit Tests
+* Interfaces
+* Method overriding
+* Language-Integrated Query (LINQ) 
+* Regex
+* Uinit Tests
 
 Task: 
 Create code which, given a list of strings, sorts the list based on the earliest alphabetic</br>
